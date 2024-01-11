@@ -5,5 +5,8 @@ INC  := -I${INCLUDE_DIR}
 ALL: $(OBJS)
 	mv *.o $(OBJ_DIR)
 
-%.o: %.c
-	$(CC) -c  $<  -o  $@ $(CCFLAGS) $(INC)
+#%.o: %.c
+#	$(CC) -c  $<  -o  $@ $(CCFLAGS) $(INC)
+#
+%: %.c
+	$(CC) -c $< -o $@ $(CCFLAGS) $(INC)
