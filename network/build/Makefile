@@ -1,5 +1,5 @@
-CXX 		:= g++
-CXXFLAGS 	:= -Wall -pedantic -std=c++11 -g
+CC		:= gcc
+CCFLAGS 	:= -Wall -pedantic -std=C99 -g
 
 CUR_DIR 	:= $(PWD)
 TOP_DIR     := $(shell dirname $(CUR_DIR))
@@ -20,7 +20,7 @@ SUB_DIR		+= $(TOP_DIR)/obj
 INCLUDE_DIR	:= $(TOP_DIR)/include
 
 #为让总控Makefile定义变量，在子makefile中能够访问，使用export命令将变量声明为全局可用
-export OBJ_DIR BIN_DIR LIB_DIR LIB INCLUDE_DIR BIN CXX CXXFLAGS LD_FLAGS
+export OBJ_DIR BIN_DIR LIB_DIR LIB INCLUDE_DIR BIN CC CCFLAGS LD_FLAGS
 
 #ALL伪指令是Makefile的入口处理指令，执行顺序根据ALL：后面指定的顺序执行。
 #先执行BEGIN，再执行$(SUB_DIR)，最后执行END。

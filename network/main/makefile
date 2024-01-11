@@ -7,5 +7,5 @@ INC  += -I${INCLUDE_DIR}/division
 ALL: $(OBJS)
 	mv *.o $(OBJ_DIR)
 
-%.o: %.cpp
-	$(CXX) -c  $<  -o  $@ $(CXXFLAGS) $(INC)
+%.o: %.c
+	$(CC) -c  $<  -o  $@ $(CCFLAGS) $(INC)
