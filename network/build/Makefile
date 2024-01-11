@@ -6,15 +6,15 @@ TOP_DIR     := $(shell dirname $(CUR_DIR))
 OBJ_DIR 	:= $(TOP_DIR)/obj/
 BIN_DIR 	:= $(TOP_DIR)/bin/
 LIB_DIR     := $(TOP_DIR)/lib/
-LIB			:= -lmul -ldiv
-BIN 		:= test
+#LIB			:= -lmul -ldiv
+BIN 		:= network
 
 LD_FLAGS    := -L$(LIB_DIR)
 
 SUB_DIR 	:= $(TOP_DIR)/src
-SUB_DIR		+= $(TOP_DIR)/src/multiplication
-SUB_DIR     += $(TOP_DIR)/src/division
-SUB_DIR		+= $(TOP_DIR)/main
+#SUB_DIR		+= $(TOP_DIR)/src/multiplication
+#SUB_DIR     += $(TOP_DIR)/src/division
+#SUB_DIR		+= $(TOP_DIR)/main
 SUB_DIR		+= $(TOP_DIR)/obj
 
 INCLUDE_DIR	:= $(TOP_DIR)/include
